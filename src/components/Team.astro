@@ -1,7 +1,7 @@
 ---
 const teams = [
-  {name: "Gustavo Mejía-Ch", description: "Founder", image: "/assets/team/team-01.png", linkedin: "#" },
-  {name: "José Méndez", description: "Co-Founder", image: "/assets/team/team-02.png", linkedin: "#"},
+  {name: "Gustavo Mejía-Ch", description: "Founder", image: "/assets/team/gustavo.jpeg", linkedin: "https://www.linkedin.com/in/gustavo-mej%C3%ADa-ch/" },
+  {name: "José Méndez", description: "Co-Founder", image: "/assets/team/jose.jpeg", linkedin: "https://www.linkedin.com/in/jose-mendez-torres/"},
 ]
 ---
 
@@ -10,16 +10,17 @@ const teams = [
   <div class="container">
     <div class="-mx-4 flex flex-wrap">
       <div class="w-full px-4">
-        <div class="mx-auto mb-[60px] max-w-[485px] text-center">
+        <div class="mx-auto mb-[60px] max-w-[530px] text-center">
           <span class="text-primary mb-2 block text-lg font-semibold">
              Team Members
           </span>
           <h2 class="mb-3 text-3xl leading-[1.2] font-bold text-dark dark:text-white sm:text-4xl md:text-[40px]">
             Founders
           </h2>
-          <p class="text-body-color dark:text-dark-6 text-base">
-            There are many variations of passages of Lorem Ipsum available
-            but the majority have suffered alteration in some form.
+          <p class="text-body-color dark:text-dark-6 text-base text-justify">
+           With over 16 years of combined experience in finance and technology, the founding team is exceptionally 
+           equipped to lead in the fintech sector. With a deep understanding of financial services and extensive experience in software development, 
+           they are uniquely positioned to innovate and lead in the Fintech space.
           </p>
         </div>
       </div>
@@ -154,6 +155,7 @@ const teams = [
                 <div class="flex items-center gap-5 justify-center">
                   <a
                     href={team.linkedin}
+                    target="_blank"
                     class="hover:text-primary text-dark-6"
                   >
                     <svg class="fill-body-color hover:fill-primary" width="50px" height="50px" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
