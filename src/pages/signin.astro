@@ -6,10 +6,10 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   description="Play Astro is a free and open-source Astro template, built for SaaS, startup, business and software website. Play crafted in a way that you can use with almost all sort of web project."
-  title="Sign In | Play Astro"
+  title="Log In | Play Astro"
 >
   <Breadcrumb>
-    <Fragment slot="title">Sign In Page</Fragment>
+    <Fragment slot="title">Log In Page</Fragment>
   </Breadcrumb>
   <Formbox>
     <form>
@@ -31,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="mb-9">
         <input
           type="submit"
-          value="Sign In"
+          value="Log In"
           class="border-primary w-full cursor-pointer rounded-md border bg-primary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
         />
       </div>
@@ -107,7 +107,7 @@ import Layout from '../layouts/Layout.astro';
     </a>
     <p class="text-base text-body-secondary">
       Not a member yet?
-      <a href="/signup" class="text-primary hover:underline">
+      <a href={import.meta.env.PUBLIC_NEXT_RIPAE_URL} class="text-primary hover:underline">
         Sign Up
       </a>
     </p>

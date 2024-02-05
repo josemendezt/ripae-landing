@@ -126,8 +126,8 @@ import Layout from '../layouts/Layout.astro';
 
     <p class="text-base text-body-secondary">
       Already have an account?
-      <a href="/signin" class="text-primary hover:underline">
-        Sign In
+      <a href={`${import.meta.env.PUBLIC_NEXT_RIPAE_URL}/login`} class="text-primary hover:underline">
+        Log In
       </a>
     </p>
   </Formbox>
