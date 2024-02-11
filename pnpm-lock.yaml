@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.0
     version: 5.1.0(astro@3.6.4)(tailwindcss@3.4.1)
+  '@emailjs/browser':
+    specifier: ^4.1.0
+    version: 4.1.0
   '@fontsource-variable/inter':
     specifier: ^5.0.8
     version: 5.0.16
@@ -17,6 +20,9 @@ dependencies:
   astro-compress:
     specifier: ^2.0.15
     version: 2.2.8
+  nodemailer:
+    specifier: ^6.9.9
+    version: 6.9.9
   swiper:
     specifier: ^11.0.4
     version: 11.0.5
@@ -348,6 +354,11 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@emailjs/browser@4.1.0:
+    resolution: {integrity: sha512-AWLTmFli2NIKjBXs4Fql1B5z8i3W2r+CKCaxp0DdcFzcIQxrCS2TzmqJtIiPZKh9FpZgqueQTivBx6QOxaz89Q==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emnapi/runtime@0.45.0:
@@ -3271,6 +3282,11 @@ packages:
 
   /node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
+    dev: false
+
+  /nodemailer@6.9.9:
+    resolution: {integrity: sha512-dexTll8zqQoVJEZPwQAKzxxtFn0qTnjdQTchoU6Re9BUUGBJiOy3YMn/0ShTW6J5M0dfQ1NeDeRTTl4oIWgQMA==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /normalize-path@3.0.0:

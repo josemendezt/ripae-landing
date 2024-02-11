@@ -1,4 +1,48 @@
-<!-- ====== Contact Start ====== -->
+<script>
+import emailjs from '@emailjs/browser';
+
+
+  document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault(); 
+
+   const form = e.target as HTMLFormElement;
+   const formData = new FormData(form);
+
+   const formValues = {
+    fullName: formData.get('fullName'),
+    email: formData.get('email'),
+    phone: formData.get('phone'),
+    message: formData.get('message'),
+   }
+
+     const templateParams = {
+      from_name: formValues.fullName,
+      email: formValues.email,
+      phone: formValues.phone,
+      message: formValues.message,
+    };
+
+  emailjs
+      .send(
+        import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+         import.meta.env.PUBLIC_EMAILJS_PUB_KEY,
+      )
+      .then(
+        function (response: any) {
+          console.log('SUCCESS!', response.status, response.text);
+          document.getElementById('successMsg')?.classList.remove('hidden')
+          form.reset()
+      
+        },
+        function (error: any) {
+          console.log('FAILED...', error);
+        }
+      );
+ });
+
+</script>
 <section id="contact" class="relative py-20 md:py-[120px]">
   <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
   <div class="absolute top-0 left-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
@@ -52,35 +96,38 @@
           data-wow-delay=".2s"
         >
           <h3 class="mb-8 text-2xl font-semibold md:text-[28px] md:leading-[1.42] text-dark dark:text-white">
-            Send us a Message
+            Want to learn more? Send us a Message
           </h3>
-          <form>
+          <form id="contactForm">
             <div class="mb-[22px]">
               <label for="fullName" class="block text-sm text-body-color dark:text-dark-6 mb-4">Full Name*</label>
-              <input type="text" name="fullName" placeholder="Adam Gelius"
+              <input required type="text" name="fullName" placeholder="Adam Gelius"
                 class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none" />
             </div>
             <div class="mb-[22px]">
               <label for="email" class="block text-sm text-body-color dark:text-dark-6 mb-4">Email*</label>
-              <input type="email" name="email" placeholder="example@yourmail.com"
+              <input required type="email" name="email" placeholder="example@yourmail.com"
                 class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none" />
             </div>
             <div class="mb-[22px]">
-              <label for="phone" class="block text-sm text-body-color dark:text-dark-6 mb-4">Phone*</label>
+              <label for="phone" class="block text-sm text-body-color dark:text-dark-6 mb-4">Phone (Optional)</label>
               <input type="text" name="phone" placeholder="+885 1254 5211 552"
                 class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none" />
             </div>
             <div class="mb-[30px]">
               <label for="message" class="block text-sm text-body-color dark:text-dark-6 mb-4">Message*</label>
-              <textarea name="message" rows="2" placeholder="type your message here"
+              <textarea required name="message" rows="2" placeholder="type your message here"
                 class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 resize-none border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none"></textarea>
             </div>
             <div class="mb-0">
               <button type="submit"
-                class="inline-flex items-center justify-center rounded-md bg-primary py-3 px-10 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-blue-dark">
+                class="inline-flex items-center justify-center rounded-md bg-primary py-3 px-10 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-secondary hover:text-primary">
                 Send
               </button>
             </div>
+              <div id="successMsg" class="text-primary mt-4 hidden">
+                Your message was sent! we will contact you shortly.
+              </div>
           </form>
         </div>
       </div>
