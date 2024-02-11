@@ -24,10 +24,11 @@ import emailjs from '@emailjs/browser';
 
   emailjs
       .send(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
+        //Not great but public vars are not working :(
+        'service_ywse0uk',
+        'template_iz8fp6w',
         templateParams,
-         import.meta.env.EMAILJS_PUB_KEY,
+         'eei-nXNKanaLF8lxZ',
       )
       .then(
         function (response: any) {
