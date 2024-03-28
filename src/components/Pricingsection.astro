@@ -1,63 +1,56 @@
 ---
 const priceboxes = [
   {
-    popular:false,
-    packageName:"Starter",
-    price:'250 $',
-    subtitle:'Details',
-    btn:'Purchase Now',
-    purchaseLink:'/#',
-    offerlist: [
-      {title: "Term: 30 Days"},
-      {title: "6.5% - 13.5% Interest"},
-    ],
+    popular: false,
+    packageName: 'Starter',
+    price: '250 $',
+    subtitle: 'Details',
+    btn: 'Purchase Now',
+    purchaseLink: '/#',
+    offerlist: [{ title: 'Term: 45 Days' }, { title: '5% - 9% Interest' }],
   },
   {
-    popular:true,
-    packageName:"Basic",
-    price:'500 $',
-    subtitle:'Details',
-    btn:'Purchase Now',
-    purchaseLink:'/#',
-    offerlist: [
-      {title: "Term: 60 Days"},
-      {title: "8.5% - 15.5% Interest"},
-    ],
+    popular: true,
+    packageName: 'Basic',
+    price: '500 $',
+    subtitle: 'Details',
+    btn: 'Purchase Now',
+    purchaseLink: '/#',
+    offerlist: [{ title: 'Term: 90 Days' }, { title: '7% - 11% Interest' }],
   },
-  {
-    popular:false,
-    packageName:"Premium",
-    price:'1000 $',
-    subtitle:'Details',
-    btn:'Purchase Now',
-    purchaseLink:'/#',
-    offerlist: [
-        {title: "Term: 90 Days"},
-        {title: "10.5% - 17.5% Interest"},
-    ],
-  }
-]
+  // {
+  //   popular: false,
+  //   packageName: 'Premium',
+  //   price: '1000 $',
+  //   subtitle: 'Details',
+  //   btn: 'Purchase Now',
+  //   purchaseLink: '/#',
+  //   offerlist: [{ title: 'Term: 90 Days' }, { title: '10.5% - 17.5% Interest' }],
+  // },
+];
 ---
 
 <!-- ====== Loans Section Start -->
 <section
   id="loans"
-  class="relative z-20 overflow-hidden bg-white dark:bg-dark pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+  class="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]"
 >
   <div class="container">
     <div class="-mx-4 flex flex-wrap">
       <div class="w-full px-4">
         <div class="mx-auto mb-[60px] max-w-[510px] text-center">
-           <span class="mb-2 block text-lg font-semibold text-primary">
-            Looking for a loan?
-          </span> 
-          <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:leading-[1.2] md:text-[40px]">
+          <span class="mb-2 block text-lg font-semibold text-primary"> Looking for a loan?</span>
+          <h2
+            class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+          >
             Available Loans
           </h2>
           <p class="text-base text-body-color dark:text-dark-6">
-            Our investors are ready to help you, apply for a loan now and we will offer you the best available option for you
+            Our lenders are prepared to assist you with loan amounts ranging from $250 to $2,000
+            available for periods of 45 to 90 days. Apply for a loan now, and we will present the
+            best option for you.
           </p>
-           <!-- <a
+          <!-- <a
               href={`${import.meta.env.RIPAE_URL}/signUp?flow=borrower`}
               class="inline-flex justify-center w-48 mt-4 text-center items-center gap-4 py-[14px] rounded-md bg-primary px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-body-color"
             >
@@ -68,40 +61,35 @@ const priceboxes = [
     </div>
 
     <div class="flex flex-wrap justify-center">
-      {priceboxes.map(pricebox => (
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div
-            class={`wow fadeInUp relative z-10 mb-10 overflow-hidden rounded-xl bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-14`}
-            data-wow-delay=".15s"
-          >
+      {
+        priceboxes.map((pricebox) => (
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div
+              class={`wow fadeInUp relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14`}
+              data-wow-delay=".15s"
+            >
+              <h2 class="mb-11 text-center text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
+                <span class="ml-1 -tracking-[2px]">{pricebox.price}</span>
+              </h2>
 
-         
-            <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:leading-[1.21] xl:text-[42px] text-center">
-              <span class="ml-1 -tracking-[2px]">{pricebox.price}</span>
+              <div>
+                <h5 class="mb-5 text-center text-lg font-medium text-dark dark:text-white">
+                  {pricebox.subtitle}
+                </h5>
 
-            </h2>
-  
-            <div >
-              <h5 class="mb-5 text-lg font-medium text-dark dark:text-white text-center">{pricebox.subtitle}</h5>
-
-              <ul class="flex flex-col gap-[14px] justify-around items-center">
-                {pricebox.offerlist.map(item => (
-                  <li
-                    class={`text-base text-body-color dark:text-dark-6`}
-                  >
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
+                <ul class="flex flex-col items-center justify-around gap-[14px]">
+                  {pricebox.offerlist.map((item) => (
+                    <li class={`text-base text-body-color dark:text-dark-6`}>{item.title}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-          <div
-            class="text-base italic text-body-color"
-          >
-           <!-- Note: These are examples, you will need to create an account to see the available loans. Our loans are between 250$ - 5000$. -->
-           Note: these are just examples, stay tuned to get updates about our platform.
+        ))
+      }
+      <div class="text-base italic text-body-color">
+        <!-- Note: These are examples, you will need to create an account to see the available loans. Our loans are between 250$ - 5000$. -->
+        Note: these are just examples, stay tuned to get updates about our platform.
       </div>
     </div>
   </div>
