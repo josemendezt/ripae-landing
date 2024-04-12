@@ -18,11 +18,11 @@ const features = [
   },
   {
     icon: 'assets/features/idea-bulb-glow-svgrepo-com.svg',
-    title: 'Financial Literacy Center',
+    title: 'Personalized Financial Insights',
     ref: 'javascript:void(0)',
     refTitle: 'Learn More',
     description:
-      'We care about your financial wellbeing. Our Financial Literacy Center will empower you to take control over your finances and assist you in making educated decisions. ',
+      'We care about your financial wellbeing. Our personalized financial insights and literacy resources will empower you to take control of your finances and make educated decisions.',
   },
 ];
 ---
@@ -33,7 +33,9 @@ const features = [
     <div class="-mx-4 flex flex-wrap">
       <div class="w-full px-4">
         <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
-          <span class="mb-2 block text-lg font-semibold text-primary"> Features</span>
+          <span class="mb-2 block text-lg font-semibold text-primary dark:text-white">
+            Features</span
+          >
           <h2
             class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
           >
@@ -55,7 +57,7 @@ const features = [
                 <span class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45" />
                 <img class="max-w-[80%] " src={feature.icon} alt="icon" />
               </div>
-              <h4 class="mb-3 text-center text-xl font-bold text-dark dark:text-white">
+              <h4 class="mb-3 text-center text-lg font-bold text-dark dark:text-white">
                 {feature.title}
               </h4>
               <p class="mb-8 text-center text-body-color dark:text-dark-6 lg:mb-9">
