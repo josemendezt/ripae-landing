@@ -10,7 +10,7 @@ export default defineConfig({
   site: 'https://www.ripae.ca/',
   integrations: [tailwind(), compress(), sitemap()],
   output: "server",
-  adapter: node({
-    mode: "standalone"
-  })
+  // adapter: node({
+  //   mode: "standalone"
+  // })
 });
