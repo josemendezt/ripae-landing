@@ -9,6 +9,6 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   site: 'https://www.ripae.ca/',
   integrations: [tailwind(), compress(), sitemap()],
-  output: "hybrid",
+  output: "server",
   adapter: vercel()
 });

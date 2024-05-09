@@ -21,20 +21,20 @@
       message: formValues.message,
     };
 
-  //  const data = await fetch('/api/sendEmail', {
-  //     method: 'POST',
-  //     headers: {
-  //       "Content-type": "application/json"
-  //     },
-  //     body: JSON.stringify(templateParams)
-  //  })
-  //  if (data.status === 200) {
-  //       document.getElementById('successMsg')?.classList.remove('hidden');
-  //       form.reset();
-  //  } else {
-  //       document.getElementById('errorMsg')?.classList.remove('hidden');
-  //       form.reset();
-  //  }
+   const data = await fetch('/api/sendEmail.json', {
+      method: 'POST',
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(templateParams)
+   })
+   if (data.status === 200) {
+        document.getElementById('successMsg')?.classList.remove('hidden');
+        form.reset();
+   } else {
+        document.getElementById('errorMsg')?.classList.remove('hidden');
+        form.reset();
+   }
    
   });
 </script>
