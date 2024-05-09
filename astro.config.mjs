@@ -9,8 +9,8 @@ import node from "@astrojs/node";
 export default defineConfig({
   site: 'https://www.ripae.ca/',
   integrations: [tailwind(), compress(), sitemap()],
-  output: "server",
-  // adapter: node({
-  //   mode: "standalone"
-  // })
+  output: "hybrid",
+  adapter: node({
+    mode: "standalone"
+  })
 });
