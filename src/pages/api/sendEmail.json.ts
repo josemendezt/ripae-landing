@@ -5,7 +5,7 @@ export const POST: APIRoute = async ({ params, request}) => {
      const resend = new Resend(import.meta.env.RESEND_API_KEY);
     const body = await request.json()
     const mailOptions = {
-        from: 'info@info.ripae.ca', // Sender address
+        from: 'do-not-reply@info.ripae.ca', // Sender address
         to: ['info@ripae.ca','josemmendezt@gmail.com', 'gustavo.mejiachacon@queensu.ca'],                                         
         subject: 'Message from ripae.ca',
         text: `You got a new message from ${body.from_name}:
