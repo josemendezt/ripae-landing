@@ -11,11 +11,13 @@ import Team from '../components/Team.astro';
 import Contact from '../components/Contactsection.astro';
 import CTA from '../components/CTAsection.astro';
 import Blogsection from '../components/Blogsection.astro';
+import HowItWorks from '../components/howItWorks.astro';
+import MoreThan from '../components/moreThan.astro';
 ---
 
 <Layout
-  description="A marketplace that connects borrowers and lenders supporting financial growth within communities by offering accessible financing, aiming to include the underserved population and provide equitable financial opportunities."
-  title="Ripae - Your Partner in Canada's Peer to Peer Economy"
+  description="Lenders need a better way to assess creditworthiness and decrease defaults, while borrowers need a better way to demonstrate their creditworthiness. That's why RIVENFI was born."
+  title="Rivenfi - The Smart Lending Platform Powered by AI."
 >
   <style>
     html {
@@ -23,12 +25,14 @@ import Blogsection from '../components/Blogsection.astro';
     }
   </style>
   <Hero />
-  <Features />
   <About />
+  <HowItWorks />
+  <Features />
   <CTA />
-  <Pricing />
+  <MoreThan />
+  <!-- <Pricing />
   <Testimonials />
-  <Faq />
+  <Faq /> -->
   <Team />
   <!-- <Blogsection /> -->
   <Contact />

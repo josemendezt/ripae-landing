@@ -1,45 +1,38 @@
 ---
 const features = [
-  {
-    icon: 'assets/features/notes-svgrepo-com.svg',
-    title: 'Peer-to-Peer Microloans',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Take advantage of our Microloans solution. Either as a borrower or as a lender, our notes enable you to keep more of your hard earned money in your pockets.',
-  },
-  {
-    icon: 'assets/features/icon-02.svg',
-    title: 'Borrower Requests',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'If we do not have a note available that matches your needs, leave it as a requests for our lenders to review.',
-  },
+
   {
     icon: 'assets/features/idea-bulb-glow-svgrepo-com.svg',
-    title: 'Personalized Financial Insights',
+    title: 'For Lenders',
     ref: 'javascript:void(0)',
     refTitle: 'Learn More',
     description:
-      'We care about your financial wellbeing. Our personalized financial insights and literacy resources will empower you to take control of your finances and make educated decisions.',
+      'Access a wealth of information to better assess creditworthiness and reduce defaults and gain an extra layer of security.',
+  },
+    {
+    icon: 'assets/features/icon-02.svg',
+    title: 'For Borrowers',
+    ref: 'javascript:void(0)',
+    refTitle: 'Learn More',
+    description:
+      'A personalized approach to show lenders a more holistic view of your financial health.',
   },
 ];
 ---
 
 <!-- ====== Features Section Start -->
-<section class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+<section id="benefits" class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
   <div class="container">
     <div class="-mx-4 flex flex-wrap">
       <div class="w-full px-4">
         <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
           <span class="mb-2 block text-lg font-semibold text-primary dark:text-white">
-            Features</span
+            Benefits</span
           >
           <h2
             class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
           >
-            Main Features Of Ripae
+            Benefits of Rivenfi
           </h2>
           <!-- <p class="text-base text-body-color dark:text-dark-6">
             There are many variations of passages of Lorem Ipsum available
@@ -48,10 +41,10 @@ const features = [
         </div>
       </div>
     </div>
-    <div class="-mx-4 flex flex-wrap justify-around">
+    <div class="-mx-4 flex flex-wrap justify-center gap-20">
       {
         features.map((feature) => (
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+          <div class="w-[200px]px-4 md:w-1/2 lg:w-1/4">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
               <div class="relative z-10 mx-auto mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
                 <span class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45" />

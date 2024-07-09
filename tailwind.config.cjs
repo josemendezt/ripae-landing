@@ -42,6 +42,7 @@ module.exports = {
           8: '#E5E7EB',
         },
         primary: '#173167',
+        gradient: '#4b7fb3',
         'blue-dark': '#1B44C8',
         secondary: '#f0f4fc',
         'body-color': '#637381',
@@ -53,6 +54,7 @@ module.exports = {
         'gray-7': '#CED4DA',
       },
       boxShadow: {
+        fluorescent: '0 0 10px 2px rgba(255, 255, 255, 0.8)',
         input: '0px 7px 20px rgba(0, 0, 0, 0.03)',
         form: '0px 1px 55px -11px rgba(0, 0, 0, 0.01)',
         pricing: '0px 0px 40px 0px rgba(0, 0, 0, 0.08)',
